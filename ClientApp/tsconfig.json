@@ -9,7 +9,6 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "angularCompilerOptions": { "strictMetadataEmit": true },
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -17,5 +16,8 @@
       "es2017",
       "dom"
     ]
+  },
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true
   }
 }
