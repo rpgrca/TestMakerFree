@@ -7,7 +7,52 @@ using System.Collections.Generic;
 namespace TestMakerFree.Controllers {
     [Route("api/[controller]")]
     public class QuestionController : Controller {
-        // GET api/question/all
+        #region RESTful conventions method
+        /// <summary>
+        /// GET: api/question/{}id
+        /// Retrieves the Question with the given {id}
+        /// </summary>
+        /// <param name="id">The ID of an existing Question</param>
+        /// <returns>the Question with the given {id}</returns>
+        [HttpGet("{id}")]
+        public IActionResult Get(int id) {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Adds a new Question to the Database
+        /// </summary>
+        /// <param name="m">The QuestionViewModel containing the data to insert</param>
+        [HttpPut]
+        public IActionResult Put(QuestionViewModel m) {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Edit the Question with the given {id}
+        /// </summary>
+        /// <param name="m">The QuestionViewModel containing the data to update</param>
+        [HttpPost]
+        public IActionResult Post(QuestionViewModel m) {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes the Question with the given {id} from the Database
+        /// </summary>
+        /// <param name="id">The ID of an existing Question</param>
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id) {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        /// <summary>
+        /// GET api/question/all
+        /// Retrieves the {num} latest Questions
+        /// </summary>
+        /// <param name="num">the number of questions to retrieve</param>
+        /// <returns>the {num} latest Questions</returns>
         [HttpGet("All/{quizId}")]
         public IActionResult All(int quizId) {
             var sampleQuestions = new List<QuestionViewModel>();
